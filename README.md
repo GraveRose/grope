@@ -6,6 +6,14 @@ A shell script to enumerate hosts based on a passive packet capture.
 
 By taking a packet capture in promiscuous mode, you will capture information which is not necessarily destined for your host which will allow you to obtain packets from other hosts which use "noisy" protocols such as ARP, DHCP, LLDP and more. Once you have a packet capture, you can run it through *grope* which will then parse the PCap and extract useful information which can then be used for offensive security or whatever else you want.
 
+## Requirements
+* tshark
+* uniq
+* awk
+* sed
+* sort
+* grep
+
 ## Usage
 
 First, take a packet capture and save it. For example: `tcpdump -nn -vvv -e -s 0 -X -c 100 -w output.pcap -i eth0`
